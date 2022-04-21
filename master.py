@@ -9,7 +9,7 @@ import audio
 
 # Create AUDIO and SHT30 Sensor objects
 sensor = sht30.SHT30()
-sound = audio.AUDIO()
+sound = audio.AUDIO("/home/pi/Audio-Alert-System/Audio-Files/Alert-Audio/")
 sound.set_espeak_gap(1000) # Set gap between each word to be 1 second (1000 ms)
 
 # Instantiate humidity and temperature
@@ -58,7 +58,7 @@ def main():
         if (humidity > 90):
             tooHumid()
         
-        # Of temperature is greater than 50 C Alert Danger
+        # If temperature is greater than 50 C Alert Danger
         if (temp > 50):
             overheating()
         
