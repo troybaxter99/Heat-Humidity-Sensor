@@ -31,23 +31,24 @@ def getMeasurements():
 
 # OVERHEATING Alert System!!!
 def overheating():
+    # SEt Volume to Max Level:
+    sound.set_volume(100)
     # Play Overheating Alert 3 Times
     for i in range(0,3):
         sound.play_audio("Overheating-Alert.wav")
         time.sleep(1)
-        sound.play_message("Danger! Danger! Danger!")
-        sound.play_message("Over Heating! Over Heating! Over Heating!")
+        sound.play_message("Danger! Danger! Danger! Over Heating! Over Heating! Over Heating!")
     
 # HUMIDITY Alert System!!!
 def tooHumid():
+    # Set Volume to Max Level:
+    sound.set_volume(100)
     # Play Humidity Alert 3 Times
-   for i in range(0,3):
+    for i in range(0,3):
         sound.play_audio("Humidity-Alert.wav")
         time.sleep(2)
         
-        # Play message 3 teams
-        for j in range(0,3):
-            sound.play_message("Danger! Too Humid!")
+        sound.play_message("Danger! Too Humid! Danger! Too Humid! Danger! Too Humid!")
             
 def main():
     while True:
